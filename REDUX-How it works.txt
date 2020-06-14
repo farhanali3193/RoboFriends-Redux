@@ -1,0 +1,24 @@
+Actions are simple functions which return a object as described in the actions.js file.
+
+The reducer will act accordingly to the action type which is defined in the actions.js file.
+
+This is the reason why we use a switch statement in our reducers.
+
+Reducers get basically all action types but we filter out the one we need for specific reducers.
+
+By using mapDispatchToProps, we dispatch an action. As you might remember, we import the actions in our components.
+
+Dispatching means, go to the reducers, pass in the action type and any payload we might have.
+
+This will call basically all reducers with ﻿watch out, there is a action fired, which reducer wants to take care of it?
+
+Our searchRobot reducer then shouts out ﻿I'm interested about the CHANGE_SEARCH_FIELD action type.
+
+Then the state gets changed.
+
+The missing gap in here is, how actions and reducers work together right?
+
+Have a look at the index.js file. There we used a function called combineReducers.
+
+All this function does ius, it takes all of our reducers and combine them into one place. Redux then figures out (again, depending on the action type) which reducer has to take care of the dispatched action.
+
